@@ -1,96 +1,291 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- 
+        Nutritionist Website - Contact Page
+        Course: MTM6201 Web Development II
+        Author: Andy
+    -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Nutritionist</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Contact Nutritionist for personalized nutrition coaching. Reach us via email, phone, or our contact form.">
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ContactPage",
+        "name": "Contact Nutritionist"
+    }
+    </script>
+    
+    <title>Contact Us - Nutritionist</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-
-    <header>
-        <div class="nav-container">
-            <a href="index.html" class="logo">
-                <span style="color:var(--lime-green)">✦</span> Nutritionist
-            </a>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html" class="active">Contact</a></li>
-                </ul>
-            </nav>
-            <a href="contact.html" class="btn-small">Contact Us</a>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Announcement Bar -->
+    <div class="announcement-bar" role="banner">
+        <p>🍃 Join Our Personalized Nutrition Demo For Free <a href="contact.html">→</a></p>
+    </div>
+    
+    <!-- Header -->
+    <header class="header" role="banner">
+        <div class="container">
+            <div class="header__inner">
+                <a href="index.html" class="logo" aria-label="Nutritionist - Home">
+                    <svg class="logo__icon" viewBox="0 0 36 36" aria-hidden="true">
+                        <circle cx="9" cy="9" r="8" fill="#CBEA7B"/>
+                        <circle cx="27" cy="9" r="8" fill="#CBEA7B"/>
+                        <circle cx="9" cy="27" r="8" fill="#CBEA7B"/>
+                        <circle cx="27" cy="27" r="8" fill="#CBEA7B"/>
+                        <circle cx="18" cy="18" r="5" fill="#1A3129"/>
+                    </svg>
+                    <span>Nutritionist</span>
+                </a>
+                
+                <nav class="nav" role="navigation" aria-label="Main navigation">
+                    <ul class="nav__list" id="nav-menu">
+                        <li><a href="index.html" class="nav__link">Home</a></li>
+                        <li><a href="about.html" class="nav__link">About</a></li>
+                        <li><a href="index.html#team" class="nav__link">Team</a></li>
+                        <li><a href="index.html#process" class="nav__link">Process</a></li>
+                        <li><a href="index.html#pricing" class="nav__link">Pricing</a></li>
+                        <li><a href="index.html#blog" class="nav__link">Blog</a></li>
+                    </ul>
+                    
+                    <button class="nav__toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu">
+                        <span class="nav__toggle-bar"></span>
+                        <span class="nav__toggle-bar"></span>
+                        <span class="nav__toggle-bar"></span>
+                    </button>
+                </nav>
+                
+                <a href="contact.html" class="btn btn--primary header__cta nav__link--active">Contact Us</a>
+            </div>
         </div>
     </header>
-
-    <main class="container">
+    
+    <!-- Main Content -->
+    <main id="main-content">
         
-        <div class="contact-hero">
-            <div class="icon-box" style="margin: 0 auto 20px auto;">✉</div>
-            <h1>Contact Us</h1>
-            <p>We value your feedback. Our dedicated team is here to assist you.</p>
-
-            <div class="contact-cards">
-                <div class="contact-card">
-                    <div style="font-size:2rem; margin-bottom:10px;">✉</div>
-                    <p>support@nutritionist.com</p>
-                </div>
-                <div class="contact-card">
-                    <div style="font-size:2rem; margin-bottom:10px;">☎</div>
-                    <p>+1 (555) 123-4567</p>
-                </div>
-                <div class="contact-card">
-                    <div style="font-size:2rem; margin-bottom:10px;">📍</div>
-                    <p>123 Wellness Ave, City</p>
+        <!-- Contact Hero Section -->
+        <section class="contact-hero" aria-labelledby="contact-title">
+            <div class="container">
+                <svg class="contact-hero__icon animate-float" viewBox="0 0 80 80" aria-hidden="true">
+                    <circle cx="20" cy="20" r="18" fill="#CBEA7B"/>
+                    <circle cx="60" cy="20" r="18" fill="#CBEA7B"/>
+                    <circle cx="20" cy="60" r="18" fill="#CBEA7B"/>
+                    <circle cx="60" cy="60" r="18" fill="#CBEA7B"/>
+                    <circle cx="40" cy="40" r="12" fill="#1A3129"/>
+                </svg>
+                
+                <h1 id="contact-title" class="contact-hero__title animate-fade-in-up">Contact Us</h1>
+                <p class="contact-hero__text animate-fade-in-up delay-200">
+                    We value your feedback and inquiries. Our dedicated team is here to assist you on your journey to better health. Whether you have questions about our services, need support with your nutrition plan, or want to share your success story, we'd love to hear from you.
+                </p>
+                
+                <!-- Contact Info Cards -->
+                <div class="contact-info">
+                    <a href="mailto:support@nutritionist.com" class="contact-info-card">
+                        <div class="contact-info-card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                        </div>
+                        <p class="contact-info-card__text">support@nutritionist.com</p>
+                    </a>
+                    
+                    <a href="tel:+919851234567" class="contact-info-card">
+                        <div class="contact-info-card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                            </svg>
+                        </div>
+                        <p class="contact-info-card__text">+91 9851 234567</p>
+                    </a>
+                    
+                    <div class="contact-info-card">
+                        <div class="contact-info-card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                        </div>
+                        <p class="contact-info-card__text">Somewhere in the World</p>
+                    </div>
                 </div>
             </div>
-        </div>
-
-        <div class="form-map-container">
-            
-            <form action="#">
-                <div class="form-group">
-                    <label for="name">Full Name</label>
-                    <input type="text" id="name" placeholder="Enter your Name">
+        </section>
+        
+        <!-- Contact Form Section -->
+        <section class="contact-form-section" aria-labelledby="form-title">
+            <div class="container">
+                <div class="contact-form-section__inner">
+                    <div class="contact-form__wrapper">
+                        <header class="contact-form__header">
+                            <h2 id="form-title">Send Us a Message</h2>
+                            <p>Fill out the form below and we'll get back to you within 24-48 hours.</p>
+                        </header>
+                        
+                        <form class="contact-form" id="contact-form" action="#" method="POST" novalidate>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName">First Name</label>
+                                    <input type="text" id="firstName" name="firstName" placeholder="Enter First Name" required aria-required="true">
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">Last Name</label>
+                                    <input type="text" id="lastName" name="lastName" placeholder="Enter Last Name" required aria-required="true">
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" name="email" placeholder="Enter your Email" required aria-required="true">
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone Number</label>
+                                    <input type="tel" id="phone" name="phone" placeholder="Enter your Phone Number">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5" placeholder="Enter your Message" required aria-required="true"></textarea>
+                            </div>
+                            
+                            <div class="form-group form-checkbox">
+                                <input type="checkbox" id="newsletter" name="newsletter">
+                                <label for="newsletter">I would like to receive nutrition tips and updates via email</label>
+                            </div>
+                            
+                            <button type="submit" class="btn btn--primary">Send Message</button>
+                        </form>
+                    </div>
+                    
+                    <div class="contact-map">
+                        <picture>
+                            <source media="(min-width: 768px)" srcset="images/map-large.jpg, images/map-medium.jpg" sizes="500px">
+                            <img src="images/map-small.jpg" alt="Map showing our location" width="500" height="400" loading="lazy">
+                        </picture>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" placeholder="Enter your Email">
-                </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" rows="5" placeholder="Your Message"></textarea>
-                </div>
-                <button type="submit" class="btn-primary" style="width:100%">Send Message</button>
-            </form>
-
-            <div class="map-box">
-                <img src="https://placehold.co/600x500/1E2823/D3F678?text=Map+Location" 
-                     alt="Map showing clinic location" 
-                     style="width:100%; height:100%; object-fit:cover; opacity:0.8;">
             </div>
-
-        </div>
-
-        <div style="margin-top:60px; background:var(--white); padding:40px; border-radius:12px; display:flex; justify-content:space-between; align-items:center;">
-            <div>
-                <h2>Are you ready to embark on a transformative journey?</h2>
-                <p>Join us at Nutritionist and let us guide you.</p>
+        </section>
+        
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-section__inner">
+                    <div class="cta-section__content">
+                        <h2>Ready to Start Your Journey?</h2>
+                        <p>Take the first step towards a healthier you with our personalized nutrition coaching.</p>
+                    </div>
+                    <a href="#contact-form" class="btn btn--primary">Book a Consultation</a>
+                </div>
             </div>
-            <a href="#" class="btn-primary">Join Us Now</a>
-        </div>
-
+        </section>
+        
     </main>
-
-    <footer>
-        <div class="footer-content">
-            <div class="logo">✦ Nutritionist</div>
-            <div>
-                <p>&copy; 2025 Nutritionist. Design by Praha.</p>
+    
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer__top">
+                <div class="footer__brand">
+                    <a href="index.html" class="footer__logo">
+                        <svg viewBox="0 0 36 36" aria-hidden="true">
+                            <circle cx="9" cy="9" r="8" fill="#CBEA7B"/>
+                            <circle cx="27" cy="9" r="8" fill="#CBEA7B"/>
+                            <circle cx="9" cy="27" r="8" fill="#CBEA7B"/>
+                            <circle cx="27" cy="27" r="8" fill="#CBEA7B"/>
+                            <circle cx="18" cy="18" r="5" fill="#F6F6F1"/>
+                        </svg>
+                        <span>Nutritionist</span>
+                    </a>
+                    <p class="footer__tagline">Transform your health with personalized nutrition coaching from certified experts.</p>
+                </div>
+                
+                <nav aria-label="Footer - Pages">
+                    <h4 class="footer__nav-title">Pages</h4>
+                    <ul class="footer__nav-list">
+                        <li><a href="index.html" class="footer__nav-link">Home</a></li>
+                        <li><a href="about.html" class="footer__nav-link">About</a></li>
+                        <li><a href="index.html#team" class="footer__nav-link">Team</a></li>
+                        <li><a href="index.html#process" class="footer__nav-link">Process</a></li>
+                    </ul>
+                </nav>
+                
+                <nav aria-label="Footer - Services">
+                    <h4 class="footer__nav-title">Services</h4>
+                    <ul class="footer__nav-list">
+                        <li><a href="index.html#pricing" class="footer__nav-link">Pricing</a></li>
+                        <li><a href="index.html#blog" class="footer__nav-link">Blog</a></li>
+                        <li><a href="contact.html" class="footer__nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+                
+                <nav aria-label="Footer - Legal">
+                    <h4 class="footer__nav-title">Legal</h4>
+                    <ul class="footer__nav-list">
+                        <li><a href="#" class="footer__nav-link">Privacy Policy</a></li>
+                        <li><a href="#" class="footer__nav-link">Terms of Service</a></li>
+                    </ul>
+                </nav>
+            </div>
+            
+            <div class="footer__bottom">
+                <div class="footer__contact">
+                    <a href="mailto:hello@nutritionist.com" class="footer__contact-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        hello@nutritionist.com
+                    </a>
+                    <a href="tel:+919851234567" class="footer__contact-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        +91 9851 234567
+                    </a>
+                    <span class="footer__contact-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        Somewhere in the World
+                    </span>
+                </div>
+                <p class="footer__copyright">© 2024 Nutritionist. All rights reserved.</p>
             </div>
         </div>
     </footer>
-
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navToggle = document.getElementById('nav-toggle');
+            const navMenu = document.getElementById('nav-menu');
+            
+            if (navToggle && navMenu) {
+                navToggle.addEventListener('click', function() {
+                    navMenu.classList.toggle('is-open');
+                    navToggle.classList.toggle('is-open');
+                    navToggle.setAttribute('aria-expanded', navMenu.classList.contains('is-open'));
+                    document.body.style.overflow = navMenu.classList.contains('is-open') ? 'hidden' : '';
+                });
+            }
+            
+            // Form submission handling
+            const form = document.getElementById('contact-form');
+            if (form) {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    alert('Thank you for your message! We will get back to you soon.');
+                    form.reset();
+                });
+            }
+        });
+    </script>
 </body>
 </html>
