@@ -3,65 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Personalized nutrition planning for a healthy lifestyle.">
-    <title>Nutritionist | Home</title>
+    <title>Nutritionist - Personalized Coaching</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <a href="#main-content" class="skip-link">Skip to content</a>
-
     <header>
         <div class="nav-container">
-            <a href="index.html" class="logo">🥗 NutriPlan</a>
+            <a href="index.html" class="logo">
+                <span style="color:var(--lime-green)">✦</span> Nutritionist
+            </a>
             <nav>
                 <ul class="nav-links">
-                    <li><a href="index.html" class="active" aria-current="page">Home</a></li>
-                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
+            <a href="contact.html" class="btn-small">Contact Us</a>
         </div>
     </header>
 
-    <main id="main-content">
-        <section class="hero">
-            <div class="hero-text">
-                <h1>Healthy Eating Made Easy</h1>
-                <p>Get a personalized diet plan tailored to your lifestyle. Eat better, feel stronger, and live longer.</p>
-                <a href="contact.html" class="btn cta-animate">Start Your Journey</a>
+    <main>
+        <div class="container" style="padding-top:0;">
+            <div class="hero-wrapper">
+                <div class="hero-split">
+                    <div class="hero-img">
+                        <img src="https://placehold.co/600x600/D3F678/1E2823?text=Woman+Pointing" alt="Nutritionist pointing at healthy food choices">
+                    </div>
+                    <div class="hero-content">
+                        <h3>Transform Your Health with</h3>
+                        <h1>Personalized Nutrition Coaching</h1>
+                        <p>Welcome to Nutritionist, your partner in achieving optimal health through personalized nutrition coaching. Our certified nutritionists are here to guide you.</p>
+                        <div style="margin-top: 2rem;">
+                            <a href="contact.html" class="btn-primary">Get Started Today</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="hero-img">
-                <img 
-                    src="images/hero-large.jpg" 
-                    srcset="images/hero-small.jpg 600w, images/hero-large.jpg 1200w"
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    alt="A happy woman holding a bowl of fresh salad"
-                >
-            </div>
-        </section>
+        </div>
 
         <section class="container">
-            <h2 style="text-align:center; margin-bottom: 2rem;">My Services</h2>
-            <div class="services-grid">
-                <div class="card">
-                    <h3>Weight Loss</h3>
-                    <p>Sustainable plans to help you reach your ideal weight without starving.</p>
-                </div>
-                <div class="card">
-                    <h3>Meal Prep</h3>
-                    <p>Weekly shopping lists and recipes to save you time and money.</p>
-                </div>
-                <div class="card">
-                    <h3>Sports Nutrition</h3>
-                    <p>Fuel your workouts with science-backed nutritional strategies.</p>
-                </div>
+            <div class="section-title">
+                <h2>Features</h2>
+                <p>We bridge the gap between science and your plate.</p>
+            </div>
+
+            <div class="features-grid">
+                <article class="feature-card">
+                    <div class="feature-header">
+                        <div class="icon-box">🥗</div>
+                        <h4>Personalized Plans</h4>
+                    </div>
+                    <p>Receive a nutrition plan that is purely customized to your body type and goals.</p>
+                </article>
+
+                <article class="feature-card">
+                    <div class="feature-header">
+                        <div class="icon-box">📊</div>
+                        <h4>Progress Tracking</h4>
+                    </div>
+                    <p>Monitor your progress with our state-of-the-art mobile tools.</p>
+                </article>
+
+                <article class="feature-card">
+                    <div class="feature-header">
+                        <div class="icon-box">🍎</div>
+                        <h4>Healthy Recipes</h4>
+                    </div>
+                    <p>Access thousands of healthy, delicious recipes tailored to you.</p>
+                </article>
+                
+                 <article class="feature-card">
+                    <div class="feature-header">
+                        <div class="icon-box">🧠</div>
+                        <h4>Mental Wellness</h4>
+                    </div>
+                    <p>We focus on the psychology of eating, not just the calories.</p>
+                </article>
+
+                 <article class="feature-card">
+                    <div class="feature-header">
+                        <div class="icon-box">💪</div>
+                        <h4>Sports Nutrition</h4>
+                    </div>
+                    <p>Fuel your workouts efficiently to gain muscle and lose fat.</p>
+                </article>
+
+                 <article class="feature-card">
+                    <div class="feature-header">
+                        <div class="icon-box">🎓</div>
+                        <h4>Education</h4>
+                    </div>
+                    <p>Learn exactly what your body needs and why.</p>
+                </article>
             </div>
         </section>
     </main>
 
-    <footer style="background:#333; color:white; padding:2rem; text-align:center; margin-top:2rem;">
-        <p>&copy; 2025 NutriPlan. Design concept by Praha.</p>
+    <footer>
+        <div class="footer-content">
+            <div class="logo">✦ Nutritionist</div>
+            <div>
+                <p>&copy; 2025 Nutritionist. Design by Praha.</p>
+            </div>
+        </div>
     </footer>
 
 </body>

@@ -3,53 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nutritionist | About Me</title>
+    <title>About - Nutritionist</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <a href="#main-content" class="skip-link">Skip to content</a>
-
     <header>
         <div class="nav-container">
-            <a href="index.html" class="logo">🥗 NutriPlan</a>
+            <a href="index.html" class="logo">
+                <span style="color:var(--lime-green)">✦</span> Nutritionist
+            </a>
             <nav>
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html" class="active" aria-current="page">About Me</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
+            <a href="contact.html" class="btn-small">Contact Us</a>
         </div>
     </header>
 
-    <main id="main-content" class="container">
-        <h1>Meet Your Nutritionist</h1>
-        <div class="hero" style="background: white; padding: 2rem 0;">
-            <div class="hero-img">
-                <img 
-                    src="images/about-large.jpg" 
-                    srcset="images/about-small.jpg 600w, images/about-large.jpg 1200w"
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    alt="Portrait of Sarah, the Nutritionist, in a kitchen"
-                >
-            </div>
-            <div class="hero-text">
-                <h2>Hi, I'm Sarah</h2>
-                <p>I believe that food is medicine. With over 10 years of experience in clinical nutrition, I have helped hundreds of clients transform their relationship with food.</p>
-                <br>
-                <h3>Certifications</h3>
-                <ul style="margin-left: 1.5rem;">
-                    <li>Certified Clinical Nutritionist (CCN)</li>
-                    <li>Master of Science in Dietetics</li>
-                    <li>Sports Nutrition Specialist</li>
-                </ul>
-            </div>
+    <main class="container">
+        
+        <div class="contact-hero" style="background:var(--bg-light);">
+            <div class="icon-box" style="margin: 0 auto 20px auto;">✿</div>
+            <h1>Welcome to Nutritionist</h1>
+            <p>Your partner in health and wellness.</p>
         </div>
+
+        <div class="story-section">
+            <section class="story-row">
+                <div class="story-img">
+                    <img src="https://placehold.co/600x400/1E2823/D3F678?text=Yoga+Class" alt="Woman doing yoga">
+                </div>
+                <div class="story-content">
+                    <h3>Inspiring Transformations</h3>
+                    <p>We started with a simple goal: to help people understand their bodies. Our holistic approach combines fitness, nutrition, and mental well-being.</p>
+                    <p><strong>Date:</strong> Jan 2020</p>
+                </div>
+            </section>
+
+            <section class="story-row reverse">
+                <div class="story-img">
+                    <img src="https://placehold.co/600x400/D3F678/1E2823?text=Healthy+Cooking" alt="Person cooking healthy food">
+                </div>
+                <div class="story-content">
+                    <h3>Evidence-Based Nutrition</h3>
+                    <p>No fads, just science. We work with leading researchers to ensure our meal plans are backed by the latest data in nutritional science.</p>
+                    <p><strong>Date:</strong> Mar 2022</p>
+                </div>
+            </section>
+            
+            <section class="story-row">
+                <div class="story-img">
+                    <img src="https://placehold.co/600x400/1E2823/ffffff?text=Team+Meeting" alt="Team meeting">
+                </div>
+                <div class="story-content">
+                    <h3>Expanding Our Team</h3>
+                    <p>As our community grew, so did we. We now have over 50 certified nutritionists dedicated to your health journey.</p>
+                    <p><strong>Date:</strong> Nov 2024</p>
+                </div>
+            </section>
+        </div>
+
     </main>
 
-    <footer style="background:#333; color:white; padding:2rem; text-align:center;">
-        <p>&copy; 2025 NutriPlan. Design concept by Praha.</p>
+    <footer>
+        <div class="footer-content">
+            <div class="logo">✦ Nutritionist</div>
+            <div>
+                <p>&copy; 2025 Nutritionist. Design by Praha.</p>
+            </div>
+        </div>
     </footer>
 
 </body>

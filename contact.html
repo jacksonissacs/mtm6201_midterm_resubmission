@@ -3,73 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nutritionist | Contact</title>
+    <title>Contact - Nutritionist</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <a href="#main-content" class="skip-link">Skip to content</a>
-
     <header>
         <div class="nav-container">
-            <a href="index.html" class="logo">🥗 NutriPlan</a>
+            <a href="index.html" class="logo">
+                <span style="color:var(--lime-green)">✦</span> Nutritionist
+            </a>
             <nav>
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Me</a></li>
-                    <li><a href="contact.html" class="active" aria-current="page">Contact</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
                 </ul>
             </nav>
+            <a href="contact.html" class="btn-small">Contact Us</a>
         </div>
     </header>
 
-    <main id="main-content" class="container">
-        <h1 style="text-align:center; margin-bottom: 2rem;">Get In Touch</h1>
+    <main class="container">
         
-        <div class="contact-wrapper">
-            <div style="flex:1; min-width: 300px;">
-                <h2>Contact Info</h2>
-                <p>Ready to start? Fill out the form or visit our clinic.</p>
-                <address style="margin-top: 1rem; font-style: normal;">
-                    <strong>Clinic Location:</strong><br>
-                    123 Healthy Way, Wellness City<br><br>
-                    <strong>Email:</strong><br>
-                    hello@nutriplan.com
-                </address>
-            </div>
+        <div class="contact-hero">
+            <div class="icon-box" style="margin: 0 auto 20px auto;">✉</div>
+            <h1>Contact Us</h1>
+            <p>We value your feedback. Our dedicated team is here to assist you.</p>
 
-            <form action="#" method="POST" style="flex:2; min-width: 300px;">
+            <div class="contact-cards">
+                <div class="contact-card">
+                    <div style="font-size:2rem; margin-bottom:10px;">✉</div>
+                    <p>support@nutritionist.com</p>
+                </div>
+                <div class="contact-card">
+                    <div style="font-size:2rem; margin-bottom:10px;">☎</div>
+                    <p>+1 (555) 123-4567</p>
+                </div>
+                <div class="contact-card">
+                    <div style="font-size:2rem; margin-bottom:10px;">📍</div>
+                    <p>123 Wellness Ave, City</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-map-container">
+            
+            <form action="#">
                 <div class="form-group">
                     <label for="name">Full Name</label>
-                    <input type="text" id="name" name="name" required>
+                    <input type="text" id="name" placeholder="Enter your Name">
                 </div>
-                
                 <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" required>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Enter your Email">
                 </div>
-
-                <div class="form-group">
-                    <label for="goal">Primary Goal</label>
-                    <select id="goal" name="goal" style="width:100%; padding:10px; border:1px solid #ddd; border-radius:5px;">
-                        <option value="weight-loss">Weight Loss</option>
-                        <option value="muscle">Muscle Gain</option>
-                        <option value="health">General Health</option>
-                    </select>
-                </div>
-
                 <div class="form-group">
                     <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="5"></textarea>
+                    <textarea id="message" rows="5" placeholder="Your Message"></textarea>
                 </div>
-
-                <button type="submit" class="btn">Send Message</button>
+                <button type="submit" class="btn-primary" style="width:100%">Send Message</button>
             </form>
+
+            <div class="map-box">
+                <img src="https://placehold.co/600x500/1E2823/D3F678?text=Map+Location" 
+                     alt="Map showing clinic location" 
+                     style="width:100%; height:100%; object-fit:cover; opacity:0.8;">
+            </div>
+
         </div>
+
+        <div style="margin-top:60px; background:var(--white); padding:40px; border-radius:12px; display:flex; justify-content:space-between; align-items:center;">
+            <div>
+                <h2>Are you ready to embark on a transformative journey?</h2>
+                <p>Join us at Nutritionist and let us guide you.</p>
+            </div>
+            <a href="#" class="btn-primary">Join Us Now</a>
+        </div>
+
     </main>
 
-    <footer style="background:#333; color:white; padding:2rem; text-align:center; margin-top:2rem;">
-        <p>&copy; 2025 NutriPlan. Design concept by Praha.</p>
+    <footer>
+        <div class="footer-content">
+            <div class="logo">✦ Nutritionist</div>
+            <div>
+                <p>&copy; 2025 Nutritionist. Design by Praha.</p>
+            </div>
+        </div>
     </footer>
 
 </body>
