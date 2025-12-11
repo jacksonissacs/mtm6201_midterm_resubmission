@@ -1,0 +1,230 @@
+/* -----------------------------------------------------------
+   GLOBAL VARIABLES & RESET
+   Reasons: Defines the brand color palette (Light Green/White)
+   for consistency and uses a reset for cross-browser compatibility.
+----------------------------------------------------------- */
+:root {
+    --primary-color: #2E8B57; /* SeaGreen - Healthy vibe */
+    --secondary-color: #E8F5E9; /* Light Green background */
+    --accent-color: #FF7F50; /* Coral - For Buttons/Highlights */
+    --text-dark: #333333;
+    --text-light: #666666;
+    --white: #FFFFFF;
+    --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --max-width: 1200px;
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: var(--font-main);
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--white);
+  }
+  
+  /* -----------------------------------------------------------
+     ACCESSIBILITY: SKIP LINK
+     Reasons: Allows screen readers to skip nav and go to content.
+  ----------------------------------------------------------- */
+  .skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--primary-color);
+    color: white;
+    padding: 8px;
+    z-index: 100;
+    transition: top 0.3s;
+  }
+  
+  .skip-link:focus {
+    top: 0;
+  }
+  
+  /* -----------------------------------------------------------
+     NAVIGATION
+     Reasons: Flexbox for responsive alignment.
+  ----------------------------------------------------------- */
+  header {
+    background: var(--white);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .nav-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-decoration: none;
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+    /* ANIMATION 1: Transition property on hover */
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover, .nav-links a.active {
+    color: var(--primary-color);
+  }
+  
+  /* -----------------------------------------------------------
+     LAYOUT UTILITIES
+     Reasons: CSS Grid/Flexbox wrapper for consistent spacing.
+  ----------------------------------------------------------- */
+  .container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  .btn {
+    display: inline-block;
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 1rem;
+  }
+  
+  .btn:hover {
+    background: #246d44;
+  }
+  
+  /* -----------------------------------------------------------
+     HERO SECTION
+     Reasons: Sets the brand tone. Uses Grid for layout.
+  ----------------------------------------------------------- */
+  .hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 2rem;
+    padding: 4rem 2rem;
+    background-color: var(--secondary-color);
+  }
+  
+  .hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+  
+  /* Responsive Image Handling */
+  .hero-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+  }
+  
+  /* -----------------------------------------------------------
+     ANIMATIONS
+     Reasons: Required by assignment.
+  ----------------------------------------------------------- */
+  /* ANIMATION 2: Keyframe Animation  */
+  @keyframes softPulse {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(46, 139, 87, 0.7); }
+    70% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(46, 139, 87, 0); }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(46, 139, 87, 0); }
+  }
+  
+  .cta-animate {
+    animation: softPulse 2s infinite;
+  }
+  
+  /* -----------------------------------------------------------
+     GRID SECTIONS (Services/Team)
+     Reasons: 3-column grid for services cards.
+  ----------------------------------------------------------- */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* -----------------------------------------------------------
+     FORMS (Contact Page)
+  ----------------------------------------------------------- */
+  .contact-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  
+  .form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  /* -----------------------------------------------------------
+     RESPONSIVE MEDIA QUERIES
+     Reasons: Adjusts layout for screens smaller than 768px.
+  ----------------------------------------------------------- */
+  @media (max-width: 768px) {
+    .hero {
+      grid-template-columns: 1fr; /* Stack vertically */
+      text-align: center;
+    }
+    
+    .nav-container {
+      flex-direction: column;
+      gap: 1rem;
+    }
+    
+    .hero-text h1 {
+      font-size: 2rem;
+    }
+  }
