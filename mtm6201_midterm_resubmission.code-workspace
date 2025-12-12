@@ -2,6 +2,9 @@
 	"folders": [
 		{
 			"path": "."
+		},
+		{
+			"path": "../Downloads/mtm6201-midterm 3/images"
 		}
 	],
 	"settings": {}
